@@ -18,7 +18,7 @@ func TestConsistentHash(t *testing.T) {
 		return uint32(idx)
 	}
 	m := New(2, h)
-	m.Add([]string{"4", "2"}) //4 14 2 12
+	m.Add([]string{"4", "2"}...) //4 14 2 12
 	for k, v := range keyNodeMap {
 		node := m.Get(k)
 		if node != v {
